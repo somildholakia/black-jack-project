@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black-jack</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     
+        <h2> My Points: &ensp;</h2>
+        <h4 id="count"> 0 </h4>
+    
+    <div class="both-btn">
+        <div>
+            <p> Add 3 points:  &ensp; &ensp;</p>
+            <button id="add-btn" onclick="add()">ADD</button>
+        </div>
 
+        <div>
+            <p> Subtract 1 point: </p>
+            <button id="sub-btn" onclick="sub()">SUBTRACT</button>
+        </div>
+    </div>
 
-<script src="script.js"></script>    
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.both-btn {
+    display: flex;
+    justify-content: center;
+   
+}
+
+#add-btn {
+     font-size: 20px;
+    color: blue;
+}
+
+#sub-btn {
+     font-size: 20px;
+    color: blue;
+}
+
+h2 {
+    font-size: 20px;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    
+}
+
+#count {
+    font-size: 40px;
+    color: aquamarine;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
