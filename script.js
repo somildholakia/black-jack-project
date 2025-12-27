@@ -1,20 +1,31 @@
-let count = 0;
-let count_el = document.getElementById("count")
+let no1 = 6
+let no2 = 6
+let sum = document.getElementById("sum")
 
-function add() {
-    if(count >= 10){
-        console.log("count excedded 10, game over: " + count)
-        count = 0;
-        count_el.textContent = 0;
-        return;
-    }
-    count += 3
-    count_el.textContent = count; 
-    console.log("count after adding 3: " + count)
+document.getElementById("no1").innerText = 6
+document.getElementById("no2").innerText = 6
+
+
+let count = 0
+
+function add(){
+    let result = no1 + no2 
+    count = result
+    sum.innerText = count
+
 }
 
-function sub() {
-    count -= 1;
-    count_el.textContent = count;
-    console.log("The count after subtracting 1: " + count)
+function sub(){
+    count = no1 - no2
+    sum.innerText = count
+}
+
+function mul(){
+    count = no1 * no2
+    sum.innerText = count
+}
+
+function divide(){
+    count = no1 / no2
+    sum.innerText = count
 }
