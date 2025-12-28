@@ -1,32 +1,49 @@
-let firstCard = 10
-let secondCard = 10
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let sum = firstCard + secondCard
-let cards = [firstCard,secondCard]
+let cards = [firstCard, secondCard]
 let hasBlackJack = false
 let isAlive = true
-let thirdCard = 1
-
+let newCard = getRandomCard()
+let cardsEl = document.getElementById("cards-p")
 
 let message = ""
 
 
-function start(){
+// let randomNumber = Math.floor(Math.random() * 9)
+
+
+
+
+
+function getRandomCard(){
+    let randomNumber = Math.floor(Math.random() * 14) + 1
+   
+    return randomNumber
+}
+
+function start() {
     render_game()
 }
 
-
+ 
 function render_game() {
+
+    cardsEl.textContent = "Cards: "
+
+
+
     if (sum <= 20) {
         message = "Do you want to draw a new card"
         document.getElementById("q-heading").textContent = message
         document.getElementById("sum-p").textContent = "Sum: " + sum
-        document.getElementById("cards-p").textContent = "Cards: " + cards[0] + " and " + cards[1]
+        // document.getElementById("cards-p").textContent = "Cards: " + cards[0] + " and " + cards[1]
     } else if (sum === 21) {
         message = "Wohoo!, you've got BlackJAck"
         hasBlackJack = true
         document.getElementById("q-heading").textContent = message
         document.getElementById("sum-p").textContent = "Sum: " + sum
-        document.getElementById("cards-p").textContent = "Cards: " + firstCard + " and " + secondCard
+        // document.getElementById("cards-p").textContent = "Cards: " + firstCard + " and " + secondCard
 
 
     } else {
@@ -34,24 +51,28 @@ function render_game() {
         isAlive = false
         document.getElementById("q-heading").textContent = message
         document.getElementById("sum-p").textContent = "Sum: " + sum
-        document.getElementById("cards-p").textContent = "Cards: " + firstCard + " and " + secondCard
+        // document.getElementById("cards-p").textContent = "Cards: " + firstCard + " and " + secondCard
 
 
 
     }
 
-    console.log("Has BlackJAck: " + hasBlackJack)
-    console.log("is Alive: " + isAlive)
-    console.log(message)
+
+    for (let i = 0; i < cards.length; i++) {
+        console.log(cards[i])
+
+        cardsEl.textContent += cards[i] + " "
+    }
+
+
 }
 
 
 
 function new_card() {
-    sum += thirdCard
-   render_game()
-
-
-    console.log("New card drawn")
+        let newCard = getRandomCard()
+    sum += newCard
+    cards.push(newCard)
+    render_game()
 }
 
