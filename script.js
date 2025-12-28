@@ -16,17 +16,22 @@ let message = ""
 
 
 
-function getRandomCard(){
-    let randomNumber = Math.floor(Math.random() * 14) + 1
-   
-    return randomNumber
+function getRandomCard() {
+    let randomNumber = Math.floor(Math.random()*13) + 1
+    if (randomNumber == 1) {
+        return 11
+    } else if (randomNumber == 11 || randomNumber == 12 || randomNumber == 13) {
+        return 10
+    } else {
+        return randomNumber
+    }
 }
 
 function start() {
     render_game()
 }
 
- 
+
 function render_game() {
 
     cardsEl.textContent = "Cards: "
@@ -70,7 +75,7 @@ function render_game() {
 
 
 function new_card() {
-        let newCard = getRandomCard()
+    let newCard = getRandomCard()
     sum += newCard
     cards.push(newCard)
     render_game()
