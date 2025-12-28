@@ -1,0 +1,49 @@
+body {
+    /* background-image: url("../LocalRepo/images/casino\ background_green.jpg"); */
+    background-image: linear-gradient(rgb(10, 251, 10),rgba(43, 240, 43, 0.716));
+    background-size: cover;
+    text-align: center;
+    font-style: italic;
+}
+
+#heading {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: goldenrod;
+}
+
+#q-heading {
+    font-size: 30px;
+    color: white;
+}
+
+p {
+    font-size: 25px;
+    color: white;
+}
+
+#str-btn {
+    background-color: rgb(250, 205, 94);
+    color: rgba(137, 249, 109, 0.889);
+    width: 140px;
+    height: 65px;
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 7px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#new-card {
+    background-color: rgb(250, 205, 94);
+    color: rgba(137, 249, 109, 0.889);
+    width: 140px;
+    height: 75px;
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 7px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.nbtn-div {
+    margin-top: 10px;
+}
