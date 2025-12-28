@@ -1,9 +1,11 @@
 let firstCard = 10
 let secondCard = 10
 let sum = firstCard + secondCard
+let cards = [firstCard,secondCard]
 let hasBlackJack = false
 let isAlive = true
 let thirdCard = 1
+
 
 let message = ""
 
@@ -18,7 +20,7 @@ function render_game() {
         message = "Do you want to draw a new card"
         document.getElementById("q-heading").textContent = message
         document.getElementById("sum-p").textContent = "Sum: " + sum
-        document.getElementById("cards-p").textContent = "Cards: " + firstCard + " and " + secondCard
+        document.getElementById("cards-p").textContent = "Cards: " + cards[0] + " and " + cards[1]
     } else if (sum === 21) {
         message = "Wohoo!, you've got BlackJAck"
         hasBlackJack = true
