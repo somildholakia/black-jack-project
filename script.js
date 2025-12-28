@@ -1,31 +1,12 @@
-let no1 = 6
-let no2 = 6
-let sum = document.getElementById("sum")
+let firstCard = 6
+let secondCard = 3
 
-document.getElementById("no1").innerText = 6
-document.getElementById("no2").innerText = 6
+let sum = firstCard + secondCard
 
-
-let count = 0
-
-function add(){
-    let result = no1 + no2 
-    count = result
-    sum.innerText = count
-
-}
-
-function sub(){
-    count = no1 - no2
-    sum.innerText = count
-}
-
-function mul(){
-    count = no1 * no2
-    sum.innerText = count
-}
-
-function divide(){
-    count = no1 / no2
-    sum.innerText = count
+if(sum <= 20) {
+    console.log("Do you want to draw a new card")
+} else if(sum === 21) {
+    console.log("Wohoo!, you've got BlackJAck")
+} else {
+    console.log("You're out of the game")
 }
