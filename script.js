@@ -1,4 +1,6 @@
- let firstCard = getRandomCard()
+
+
+let firstCard = getRandomCard()
 let secondCard = getRandomCard()
 let sum = firstCard + secondCard
 let cards = [firstCard, secondCard]
@@ -9,6 +11,13 @@ let cardsEl = document.getElementById("cards-p")
 
 let message = ""
 
+let player_el = document.getElementById("player")
+let player_info = {
+    name: "somil",
+    chips: 175
+}
+
+player_el.textContent = ("Name: " + player_info.name + " Chips: " + player_info.chips)
 
 // let randomNumber = Math.floor(Math.random() * 9)
 
@@ -76,9 +85,13 @@ function render_game() {
 
 
 function new_card() {
+    if(hasBlackJack === false && isAlive === true){
     let newCard = getRandomCard()
     sum += newCard
     cards.push(newCard)
     render_game()
+    } else {
+        console.log("You are out of the game.")
+    }
 }
 
