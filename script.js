@@ -1,4 +1,4 @@
-let firstCard = getRandomCard()
+ let firstCard = getRandomCard()
 let secondCard = getRandomCard()
 let sum = firstCard + secondCard
 let cards = [firstCard, secondCard]
@@ -33,6 +33,7 @@ function start() {
 
 
 function render_game() {
+   
 
     cardsEl.textContent = "Cards: "
 
